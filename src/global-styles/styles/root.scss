@@ -1,0 +1,24 @@
+/// Root Styles file
+/// Here we define all the root variables we need for our project.
+/// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
+
+:root {
+    --color-white: #ffffff;
+    --color-orange: #ff7347;
+    --color-background: #161616;
+    --color-grey: #262626;
+    --color-orange-alpha: #2D221F;
+    --font-family: 'Manrope', sans-serif;
+    --font-desktop-h1: 500 32px/120% var(--font-family);
+    --font-desktop-h2: 600 18px/120% var(--font-family);
+    --font-desktop-body: 400 16px/160% var(--font-family);
+    --font-desktop-link: 600 16px/160% var(--font-family);
+    --font-mobile-h1: 500 24px/120% var(--font-family);
+    --font-mobile-h2: 600 16px/120% var(--font-family);
+    --font-mobile-body: 400 14px/160% var(--font-family);
+    --font-mobile-link: 600 14px/160% var(--font-family);
+    --border-radius: 28px;
+    --border-stroke: 1px;
+    --border-color: var(--color-grey);
+    --border-color-hover: var(--color-orange);
+}   

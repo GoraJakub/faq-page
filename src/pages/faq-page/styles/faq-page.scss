@@ -1,0 +1,135 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+#FAQ-page {
+    @media (min-width: 979px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+.faq-container {
+   margin-top: 20px;
+   color: var(--color-white);
+   @media (min-width: 979px) {
+    max-width: 772px;
+    margin-top: 63px;
+    width: 100%;
+   }
+   .faq-headline {
+    font: var(--font-mobile-h1);
+    text-align: center;
+    max-width: 257px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    @media (min-width: 979px) {
+        font: var(--font-desktop-h1);
+        max-width: 336px;
+        margin-bottom: 40px;
+    }
+   }
+   .faq-questions {
+        &-item,
+        &-item--skeleton {
+            border: var(--border-stroke) solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 0 32px;
+            background-color: var(--color-background);
+            margin-bottom: 3px;
+            color: var(--color-white);
+            text-align: left;
+            @media (min-width: 979px) {
+                padding: 0 40px;
+                padding-right: 24px;
+            }
+            &:hover {
+                @media (min-width: 979px) {
+                    border-color: var(--color-orange);
+                }
+            }
+            &.open {
+                background-color: var(--color-orange-alpha);
+                border-color: var(--color-orange);
+                padding-bottom: 24px;
+                @media (min-width: 979px) {
+                    padding-bottom: 34px;
+                }
+                .faq-questions-question {
+                    @media (min-width: 979px) {
+                        padding-bottom: 23px;
+                    }
+                    &-header {
+                        &::before {
+                            transform: translateY(-50%) rotate(0deg);
+                        }
+                    }
+                }
+            }
+        }
+        &-item--skeleton {
+            padding: 24px 32px;
+            @media (min-width: 979px) {
+                padding: 34px 40px;
+            }
+        }
+        &-question {
+            background-color: transparent;
+            border: 0;
+            width: 100%;
+            cursor: pointer;
+            padding: 24px 0;
+            @media (min-width: 834px) {
+                padding: 30px 0;
+            }
+            @media (min-width: 979px) {
+                padding: 34px 0;
+            }
+        }
+        &-question-header {
+            font: var(--font-mobile-h2);
+            padding-right: 38px;
+            position: relative;
+            color: var(--color-white);
+            text-align: left;
+            pointer-events: none;
+            
+            @media (min-width: 979px) {
+                font: var(--font-desktop-h2);
+            }
+            &::after {
+                content: '';
+                width: 12px;
+                height: 1px;
+                top: 50%;
+                right: 5px;
+                background: var(--color-orange);
+                transform: translateY(-50%) rotate(0deg);
+                position: absolute;
+                border-radius: 100%;
+                transition: all 0.2s ease-out;
+            }
+            &::before {
+                content: '';
+                width: 12px;
+                height: 1px;
+                top: 50%;
+                right: 5px;
+                background: var(--color-orange);
+                transform: translateY(-50%) rotate(-90deg);
+                position: absolute;
+                border-radius: 100%;
+                transition: all 0.2s ease-out;
+            }
+        }
+        &-answer {
+            font: var(--font-mobile-body);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            letter-spacing: -0.02em;
+            @media (min-width: 979px) {
+                font: var(--font-desktop-body);
+                padding-right: 10px;
+                letter-spacing: -0.01em;
+            }
+        }
+   }
+}

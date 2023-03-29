@@ -1,0 +1,47 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/root.scss";
+@import "styles/normalize.scss";
+@import "styles/fonts.scss";
+
+body {
+  font-family: var(--font-family);
+  background-color: #111111;
+  padding: 0 15px;
+}
+
+
+a {
+  font: var(--font-mobile-link);
+  color: var(--color-white);
+  @media (min-width: 979px) {
+    font: var(--font-desktop-link);
+  }
+}
+
+.--skeleton {
+  opacity: 0.75;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.--skeleton-text {
+  width: 100%;
+  min-height: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 5px;
+  display: block;
+  &:last-child {
+      width: 75%;
+      margin-bottom: 0;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+      background-color: #a3b8c2;
+  }
+  100% {
+      background-color: #f0f3f5;
+  }
+}
